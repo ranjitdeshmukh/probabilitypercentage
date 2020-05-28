@@ -11,7 +11,6 @@ echo "3 Select The Tripllet"
 read select_number
 read varname
 
-
 function checkProbablity() {
 	a=$1
 	b=$2
@@ -64,6 +63,7 @@ elif [[ $varname -eq "TT" ]]
 	    echo "$new%"	    
 fi
 }
+
 
 function checkVartriplet() {
 if [[ $varname -eq "HHH" ]]; 
@@ -169,6 +169,7 @@ function doublet() {
     	 checkVarDobulet 
 }
 
+
 function tripllet() {
 
 	for (( i = 0; i <$flip; i++ )); 
@@ -215,15 +216,13 @@ function tripllet() {
 if [[ "$select_number" -eq 1 ]]; 
    then
 	    singlet
-	    exit
+
 elif [[ "$select_number" -eq 2 ]]; 
 	then
 		 doublet
-		exit
 elif [[ "$select_number" -eq 3 ]]; 
 	then
 		tripllet
-		exit
 fi
 
 
